@@ -1,0 +1,199 @@
+/* CSS for the top bar and dropdown */
+body {
+    font-family: 'Nunito Sans', sans-serif;
+    margin-bottom: 100px; /* Adjust the margin to match the height of the bottom content */
+    background-color: #5cdb95;
+}
+
+.top-bar {
+    background-color: #edf5e1;
+    color: rgb(34, 33, 33);
+    display: flex;
+    justify-content: space-between; /* Pushes left and right content to the edges */
+    align-items: center;
+    padding: 20px;
+    margin-top: -8px;
+}
+
+.website-title {
+    font-size: 24px;
+}
+
+.website-title a {
+    text-decoration: none; /* Removes the underline */
+    color: inherit; /* Inherits the color from the parent element or default text color */
+}
+
+.options-dropdown {
+    position: relative;
+}
+
+.dropdown-button {
+    background: none;
+    border: none;
+    color: rgb(34, 33, 33);
+    cursor: pointer;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #edf5e1;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    right: 0; /* Position the dropdown to the right */
+}
+
+#games{
+    background: -webkit-linear-gradient(#f0dd32, #bb700f);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: bold;
+    font-size: 20px;
+ }
+
+/* Post Style Management*/
+
+#date {
+    font-size: large;
+    font-weight: bolder;
+    margin: 0.5;
+    align-items: center;
+    justify-content: center;
+}
+
+#post-title{
+    text-decoration: underline; /* Removes the underline */
+    color: inherit; /* Inherits the color from the parent element or default text color */
+    font-size: 30px;
+}
+
+#posts_text {
+    font-size: 70px;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    min-height: 15vh; /* Make sure the container takes up at least the full viewport height */
+}
+
+.posts-container {
+    width: calc(50% - 10px); /* 50% width minus margin */
+    background-color: #edf5e1;
+    padding: 10px; /* Add some padding to the container */
+    margin: 10px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+    max-height: 150px; /* Adjust the maximum height as needed */
+}
+
+.left {
+    order: 1; /* Arrange left posts first */
+}
+
+.right {
+    order: 2; /* Arrange right posts second */
+}
+
+.post-content {
+    padding: 10px; /* Add some padding to the post content */
+    overflow-y: auto;
+    max-height: 150px; /* Adjust the maximum height as needed */
+}
+
+/* Post Style Management End*/
+
+.dropdown-content a {
+    color: rgb(34, 33, 33);
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {
+    background-color: #555;
+}
+
+
+/* CSS for the bottom content */
+.bottom-content {
+    background-color: #edf5e1;
+    color: rgb(34, 33, 33);
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    max-height: 70vh; /* Set a maximum height for the bottom content */
+    overflow-y: auto; /* Enable vertical scrolling when content exceeds the height */
+}
+
+.bottom-left, .bottom-middle, .bottom-right {
+    flex: 1;
+}
+
+.bottom-left h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.bottom-left p {
+    font-size: 16px;
+    margin: 5px 0;
+}
+
+.bottom-left a {
+    color: rgb(34, 33, 33);
+    text-decoration: none;
+}
+
+.bottom-middle a {
+    color: rgb(34, 33, 33);
+    text-decoration: none;
+    display: block;
+    margin: 5px 0;
+}
+
+.bottom-right p {
+    font-size: 16px;
+    margin: 0;
+}
+
+.post {
+    font-size: 25px;
+}
+
+/* Media query for a maximum width of 900px */
+@media (max-width: 900px) {
+    /* CSS styles to apply when the screen width is 900px or less */
+    .bottom-content {
+        bottom: -350px;
+    }
+
+    .bottom-left {
+        margin-top: -30px;
+    }
+
+    .bottom-right {
+        visibility: hidden;
+    }
+
+    .bottom-middle {
+        margin-left: 125px;
+    }
+
+    #banner {
+        width: 398px;
+        height: 90px;
+        content: url("../../assets/mobile_banner.jpg")
+    }
+
+    #post-title {
+        font-size: 20px;
+    }
+}
